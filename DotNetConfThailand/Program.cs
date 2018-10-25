@@ -1,12 +1,22 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace DotNetConfThailand
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static int RefDemo(int x, int y)
         {
-            Console.WriteLine("Hello World!");
+            x++; y--;
+            return x;
+        }
+
+        public static void Main(string[] args)
+        {
+            int a = 1, b = 10;
+            int c = RefDemo(a, b);
+            c += 100;
+
+            WriteLine($"a = {a}, b = {b}, c = {c}");
         }
     }
 }
